@@ -1,0 +1,23 @@
+<section class="login-outer-div">
+    <div class="login">
+        <h1 class="heading">LOGIN</h1>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+        <div class="form-outline mb-4">
+          <label class="form-label" for="form2Example1">Email address</label>
+          <input type="email" ngModel name="email" id="email" id="form2Example1" class="form-control" />
+        </div>
+      
+        <div class="form-outline mb-4">
+          <label class="form-label" for="form2Example2">Password</label>
+          <input type="password" ngModel name="password" id="pwd" id="form2Example2" class="form-control" />
+        </div>
+      
+        
+        <button type="submit" class="btn btn-primary btn-block mb-4 login-btn">Sign in</button>
+        
+        <div class="text-center">
+          <p>Not a member? <a routerLink="/signup" class="register-link">Register</a></p>
+        </div>
+      </form>
+    </div>
+    </section>

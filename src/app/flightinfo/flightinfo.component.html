@@ -1,0 +1,40 @@
+<section class="login-outer-div">
+    <div class="login">
+        <h1 class="heading">AIRLINES INFO</h1>
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)" class="login-form" ngNativeValidate>
+
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form2Example1">Airlines Name</label>
+                <input type="text" ngModel name="airline" class="form-control" id="inputAirLine" placeholder="Enter airlines" required>
+            </div>
+
+            <div class="form-outline mb-4">
+                <label for="inputArrivalDate">ArrivalDate</label>
+                <input type="date" ngModel name="arrivalDate" class="form-control" id="inputArrivalDate" placeholder="Enter ArrivalDate" required>
+            </div>
+            <div class="form-outline mb-4">
+                <label for="inputArrivalTime">ArrivalTime</label>
+                <input type="time" ngModel name="arrivalTime" class="form-control" id="inputArrivalTime" placeholder="Enter ArrivalTime" required>
+            </div>
+      
+            <div class="form-outline mb-4">
+                <label for="inputFlightNumber">FlightNumber</label>
+                <input type="text" ngModel name="flightNumber" class="form-control" id="inputFlightNumber" placeholder="Enter Flight Number" required>
+            </div>
+      
+            <div class="form-outline mb-4">
+                <label for="inputNumOfGuests">Number of Guests</label>
+                <input type="text" ngModel name="numOfGuests" class="form-control" id="inputNumOfGuests" placeholder="Enter Number of Guests" required>
+            </div>
+            
+            <div class="form-outline mb-4">
+                <label for="inputComments">Comments</label>
+                <input type="text" ngModel name="comments" class="form-control" id="inputComments" placeholder="Enter Comments">
+            </div>
+        <button type="submit" class="btn btn-primary btn-block mb-4 login-btn">Submit</button>
+
+        <p *ngIf ="successFulResponse">Response Submitted Successfully...!!!</p>
+        
+      </form>
+    </div>
+</section>
